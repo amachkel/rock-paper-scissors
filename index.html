@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    let myArray = ["Rock", "Paper", "Scissors"];
+
+    function computerPlay() {
+      return myArray[Math.floor(Math.random() * myArray.length)];
+    }
+    function playRound(playerSelection, computerSelection) {
+      //create 2 new variables for each selection.
+      //call .toLowerCase() on each.
+      let ps = playerSelection.toLowerCase();
+      let cs = computerSelection.toLowerCase();
+      if (ps != "rock" && ps != "paper" && ps != "scissors") {
+        return "Invalid. Please enter rock, paper, or scissors.";
+      } else if (ps == cs) {
+        return "It's a tie!";
+      } else if (
+        (ps == "rock" && cs == "paper") ||
+        (ps == "paper" && cs == "scissors") ||
+        (ps == "scissors" && cs == "rock")
+      ) {
+        return "You lose!";
+      } else {
+        return "You win!";
+      }
+    }
+  </script>
+</html>
