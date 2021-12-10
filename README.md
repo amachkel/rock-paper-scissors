@@ -1,1 +1,1 @@
- rock-paper-scissers
+ rock-paper-scissors in javascript.
