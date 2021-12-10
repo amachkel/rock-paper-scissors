@@ -17,7 +17,7 @@
       //call .toLowerCase() on each so they are case insensitive.
       let ps = playerSelection.toLowerCase();
       let cs = computerSelection.toLowerCase();
-      console.log(cs)
+      console.log(cs);
       if (ps != "rock" && ps != "paper" && ps != "scissors") {
         alert("Invalid. Please enter rock, paper, or scissors.");
       } else if (ps == cs) {
@@ -43,13 +43,11 @@
     }
     console.log(finalScore);
     if (finalScore >= 1) {
-        alert("You're the winner!");
-    }
-    else if (finalScore == 0) {
-        alert("It's a tie.");
-    }
-    else {
-        alert("You lost!");
+      alert("You're the winner!");
+    } else if (finalScore == 0) {
+      alert("It's a tie.");
+    } else {
+      alert("You lost!");
     }
   </script>
 </html>
