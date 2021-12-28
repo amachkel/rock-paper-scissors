@@ -2,22 +2,33 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <link rel="script" href="script.js" />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="assets/style.css"/>
     <title>Rock, Paper, Scissors</title>
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <h1>Rock, Paper, Scissors</h1>
       <a>Are you ready to play?</a>
     </header>
-    <textarea
-      id="choice"
-      class="input-choice"
-      name="choice"
-      placeholder="Choose your weapon wisely..."
-    ></textarea>
-    <button type="button" id="play">Play</button>
+    <section class="flexbox">
+      <div class="choice">
+        <button type="button">
+          <img src="assets/rock.jpg" id="rock" alt="rock" />
+        </button>
+      </div>
+      <div class="choice">
+        <button type="button">
+          <img src="assets/paper.jpg" id="paper" alt="paper" />
+        </button>
+      </div>
+      <div class="choice">
+        <button type="button">
+          <img src="assets/scissors.jpg" id="scissors" alt="scissors" />
+        </button>
+      </div>
+    </section>
   </body>
+  <script src="script.js"></script>
 </html>

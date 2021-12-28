@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexbox {
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+#rock, #paper, #scissors {
+  max-width: 200px;
+}
