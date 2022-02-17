@@ -1,14 +1,16 @@
 startRound = () => {
-$("#start").click(renderChoiceBtns);
+  $("#start").click(renderChoiceBtns);
 };
 
 renderChoiceBtns = () => {
   const scissorsEl = $("#scissors");
   const rockEl = $("#rock");
   const paperEl = $("#paper");
-
-}
-
+  scissorsEl.css("display", "block");
+  rockEl.css("display", "block");
+  paperEl.css("display", "block");
+};
+startRound();
 /*let myArray = ["Rock", "Paper", "Scissors"];
 let scores = [];
 function computerPlay() {

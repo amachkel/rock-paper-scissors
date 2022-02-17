@@ -11,10 +11,8 @@ header {
   padding: 5rem;
 }
 
-#rock,
-#paper,
-#scissors {
-  max-width: 200px;
+img {
+  max-width: 15vw;
 }
 
 .fade-in-text {
