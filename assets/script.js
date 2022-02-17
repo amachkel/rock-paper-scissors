@@ -9,8 +9,11 @@ renderChoiceBtns = () => {
   paperEl.css("display", "block");
 
   $(".choice").click(function () {
+    $(".choice").each(function() {
+      $(this).css("background", "white");
+    })
     let userChoice = $(this).attr("value");
-    console.log(userChoice);
+   $(this).css("background", "blue");
     getCompChoice(userChoice);
   });
 };
