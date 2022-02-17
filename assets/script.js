@@ -1,4 +1,4 @@
-startRound = () => {
+startGame = () => {
   $("#start").click(renderChoiceBtns);
 };
 
@@ -9,8 +9,21 @@ renderChoiceBtns = () => {
   scissorsEl.css("display", "block");
   rockEl.css("display", "block");
   paperEl.css("display", "block");
+
+  $(".choice").click(function (e) {
+    let button = $(this);
+    let userChoice = button.attr("value");
+    console.log(userChoice);
+  })
+  // scissorsEl.click(playerChoice(scissorsEl));
+  // rockEl.click(playerChoice(rockEl));
+  // paperEl.click(playerChoice(paperEl));
 };
-startRound();
+
+// playerChoice = (choice) => {
+//   console.log(choice);
+// }
+startGame();
 /*let myArray = ["Rock", "Paper", "Scissors"];
 let scores = [];
 function computerPlay() {
