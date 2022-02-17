@@ -1,5 +1,13 @@
-let myArray = ["Rock", "Paper", "Scissors"];
+startRound = () => {
+$("#start").click(renderChoiceBtns);
+};
 
+renderChoiceBtns = () => {
+  const scissorsEl = $("#scissors");
+  const rockEl = $("#rock");
+  const paperEl = $("#paper");
+
+}
 
 /*let myArray = ["Rock", "Paper", "Scissors"];
 let scores = [];
