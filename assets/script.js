@@ -47,7 +47,8 @@ getWinner = (userChoice, compChoice) => {
       winStatusEl.text("It's a tie!");
     } else if (
       (userChoice === "rock" && compChoice === "scissors") ||
-      (userChoice === "scissors" && compChoice === "paper")
+      (userChoice === "scissors" && compChoice === "paper") ||
+      (userChoice === "paper" && compChoice === "rock")
     ) {
       wins++;
       winStatusEl.text("Player wins!");
