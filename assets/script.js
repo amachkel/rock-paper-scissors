@@ -14,6 +14,7 @@ function renderChoiceBtns() {
 function getUserChoice() {
   let userChoice = $(this).attr("value");
   $(this).css("background", "blue");
+  $(".choice").attr("disabled", true);
   getCompChoice(userChoice);
 }
 
@@ -73,7 +74,7 @@ $("#clearBtn").click(function () {
 
 $("#playAgain").click(function () {
   $(".comp-choice").css("display", "none");
-  // $(".comp-choice").val("");
   $("#my-modal").modal("hide");
-  renderChoiceBtns();
+  $(".choice").attr("disabled", false);
+  $(".choice").css("background", "white");
 });
