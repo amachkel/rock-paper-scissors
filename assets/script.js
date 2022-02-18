@@ -70,6 +70,7 @@ $("#clearBtn").click(function () {
   $("#my-modal").modal("hide");
   $(".choice").css("display", "none");
   $(".comp-choice").css("display", "none");
+  $(".choice").attr("disabled", false);
 });
 
 $("#playAgain").click(function () {
