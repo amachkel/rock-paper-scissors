@@ -63,12 +63,17 @@ getWinner = (userChoice, compChoice) => {
 };
 
 $("#clearBtn").click(function () {
-  location.reload();
+  wins = 0;
+  losses = 0;
+  ties = 0;
+  $("#my-modal").modal("hide");
+  $(".choice").css("display", "none");
+  $(".comp-choice").css("display", "none");
 });
 
 $("#playAgain").click(function () {
   $(".comp-choice").css("display", "none");
-  $(".comp-choice").val("");
+  // $(".comp-choice").val("");
   $("#my-modal").modal("hide");
   renderChoiceBtns();
 });
