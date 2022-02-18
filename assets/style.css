@@ -15,6 +15,10 @@ img {
   max-width: 15vw;
 }
 
+.comp-choice {
+  background-color: red;
+}
+
 .fade-in-text {
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
