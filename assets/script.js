@@ -29,24 +29,24 @@ getCompChoice = (userChoice) => {
       }
     });
     console.log(compChoice);
-
-    const compScissorsEl = $("#scissors2");
-    const compRockEl = $("#rock2");
-    const compPaperEl = $("#paper2");
-    // let compDisplay = compChoice.attr("value");
-  }, 500);
-  getWinner(userChoice, compChoice);
+    getWinner(userChoice, compChoice);
+  }, 1000);
 };
 getWinner = (userChoice, compChoice) => {
-  if (userChoice === compChoice) {
-    console.log("It's a tie!");
-  } else if (
-    (userChoice === "rock" && compChoice === "scissors") ||
-    (userChoice === "scissors" && compChoice === "paper")
-  ) {
-    console.log("Player wins!");
-  } else {
-    console.log("Computer wins!");
-  }
+  let winStatusEl = $("<p>");
+  const compSec = $("#comp-sec");
+  compSec.append(winStatusEl);
+  setTimeout(function () {
+    if (userChoice === compChoice) {
+      winStatusEl.text("It's a tie!");
+    } else if (
+      (userChoice === "rock" && compChoice === "scissors") ||
+      (userChoice === "scissors" && compChoice === "paper")
+    ) {
+      winStatusEl.text("Player wins!");
+    } else {
+      winStatusEl.text("Computer wins!");
+    }
+  }, 1000);
 };
 startGame();
