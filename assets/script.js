@@ -1,6 +1,6 @@
-startGame = () => $("#start").click(renderChoiceBtns);
+$("#start").click(renderChoiceBtns);
 
-renderChoiceBtns = () => {
+function renderChoiceBtns() {
   const scissorsEl = $("#scissors");
   const rockEl = $("#rock");
   const paperEl = $("#paper");
@@ -16,7 +16,8 @@ renderChoiceBtns = () => {
     $(this).css("background", "blue");
     getCompChoice(userChoice);
   });
-};
+}
+
 getCompChoice = (userChoice) => {
   let choiceArray = ["rock", "paper", "scissors"];
   let compChoice = choiceArray[Math.floor(Math.random() * choiceArray.length)];
@@ -34,9 +35,10 @@ getCompChoice = (userChoice) => {
 };
 getWinner = (userChoice, compChoice) => {
   let winStatusEl = $("<p>");
-  const compSec = $("#comp-sec");
-  compSec.append(winStatusEl);
+  const myModal = $(".modal-body");
+  myModal.append(winStatusEl);
   setTimeout(function () {
+    $('#my-modal').modal('show');
     if (userChoice === compChoice) {
       winStatusEl.text("It's a tie!");
     } else if (
@@ -48,5 +50,5 @@ getWinner = (userChoice, compChoice) => {
       winStatusEl.text("Computer wins!");
     }
   }, 1000);
+  
 };
-startGame();
