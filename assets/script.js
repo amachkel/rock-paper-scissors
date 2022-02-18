@@ -32,10 +32,12 @@ getCompChoice = (userChoice) => {
     getWinner(userChoice, compChoice);
   }, 1000);
 };
+
+let wins = 0;
+let losses = 0;
+let ties = 0;
+
 getWinner = (userChoice, compChoice) => {
-  let wins = 0;
-  let losses = 0;
-  let ties = 0;
   let winStatusEl = $("#winStatus");
   let scoresEl = $("#scores");
   setTimeout(function () {
@@ -68,5 +70,5 @@ $("#playAgain").click(function () {
   $(".comp-choice").css("display", "none");
   $(".comp-choice").val("");
   $("#my-modal").modal("hide");
-  getUserChoice();
+  renderChoiceBtns();
 });
