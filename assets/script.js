@@ -20,19 +20,20 @@ renderChoiceBtns = () => {
 getCompChoice = (userChoice) => {
   let choiceArray = ["rock", "paper", "scissors"];
   let compChoice = choiceArray[Math.floor(Math.random() * choiceArray.length)];
-  // let compChoice = $(".comp-choice");
+
   setTimeout(function () {
+    $(".comp-choice").each(function () {
+      let choiceVal = $(this).attr("value");
+      if (compChoice === choiceVal) {
+        $(this).css("display", "block");
+      }
+    });
     console.log(compChoice);
+
     const compScissorsEl = $("#scissors2");
     const compRockEl = $("#rock2");
     const compPaperEl = $("#paper2");
-    if (compChoice === compScissorsEl.value) {
-      compScissorsEl.css("display", "block");
-    } else if (compChoice === compRockEl) {
-      compRockEl.css("display", "block");
-    } else {
-      compPaperEl.css("display", "block");
-    }
+    // let compDisplay = compChoice.attr("value");
   }, 500);
   getWinner(userChoice, compChoice);
 };
