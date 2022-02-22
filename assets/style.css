@@ -1,7 +1,13 @@
 header {
   display: flex;
+  font-size: 64px;
   flex-direction: column;
   align-items: center;
+}
+
+.choose {
+  text-align: center;
+  font-size: 64px;
 }
 
 .flexbox {
@@ -15,6 +21,12 @@ img {
   max-width: 15vw;
 }
 
+.choice:hover {
+  transition: all 0.1s ease;
+  box-shadow: 10px 10px 10px black;
+  transform: scale(1.02);
+}
+
 .comp-choice {
   background-color: red;
 }
@@ -22,13 +34,12 @@ img {
 .fade-in-text {
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 64px;
   color: black;
-  animation: fadeIn linear 3s;
-  -webkit-animation: fadeIn linear 3s;
-  -moz-animation: fadeIn linear 3s;
-  -o-animation: fadeIn linear 3s;
-  -ms-animation: fadeIn linear 3s;
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
 }
 
 @keyframes fadeIn {

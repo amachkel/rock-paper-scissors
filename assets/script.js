@@ -2,6 +2,7 @@ $("#start").click(renderChoiceBtns);
 $(".choice").click(getUserChoice);
 
 function renderChoiceBtns() {
+  const headerEl = $(".header");
   const scissorsEl = $("#scissors");
   const rockEl = $("#rock");
   const paperEl = $("#paper");
@@ -9,7 +10,20 @@ function renderChoiceBtns() {
   rockEl.css("display", "block");
   paperEl.css("display", "block");
   $(".choice").css("background", "white");
+  headerEl.addClass("animate__animated animate__backOutDown");
+  headerEl.css("--animate-duration", "1s");
+  headerEl[0].addEventListener("animationend", () => {
+    console.log("I worked");
+    headerEl.css("display", "none");
+  });
+  animateChooseEl();
 }
+
+animateChooseEl = () => {
+  const chooseEl = $(".choose");
+  chooseEl.addClass("animate__animated animate__zoomInDown animate__delay-1s");
+  chooseEl.text("Choose Your Weapon");
+};
 
 function getUserChoice() {
   let userChoice = $(this).attr("value");
