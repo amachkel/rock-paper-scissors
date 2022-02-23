@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 header {
   display: flex;
   font-size: 64px;
@@ -5,16 +9,14 @@ header {
   align-items: center;
 }
 
-.choose {
+.chooseText {
   text-align: center;
   font-size: 64px;
+  padding-top:5rem;
 }
 
-.flexbox {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 5rem;
+.card {
+  border:none;
 }
 
 img {
@@ -29,6 +31,11 @@ img {
 
 .comp-choice {
   background-color: red;
+}
+
+.modal-title {
+  text-align:center;
+  width:100%;
 }
 
 .fade-in-text {

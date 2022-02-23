@@ -22,82 +22,87 @@
   </head>
 
   <body>
-    <header class="header">
-      <h1>Rock, Paper, Scissors</h1>
-      <div class="fade-in-text">
-        <p>Are you ready to play?</p>
+    <div class="card" id="user-play">
+      <header class="header">
+        <h1>Rock, Paper, Scissors</h1>
+        <div class="fade-in-text">
+          <p>Are you ready to play?</p>
+          <button
+            type="button"
+            id="start"
+            class="d-block mx-auto btn btn-dark btn-lg"
+          >
+            LET'S DO IT
+          </button>
+        </div>
+      </header>
+      <h2 class="chooseText"></h2>
+      <div class="row justify-content-around card-body">
         <button
           type="button"
-          id="start"
-          class="d-block mx-auto btn btn-dark btn-lg"
+          class="choice"
+          id="rock"
+          value="rock"
+          style="display: none"
         >
-          LET'S DO IT
+          <img src="assets/images/rock.jpg" alt="rock" />
+        </button>
+
+        <button
+          type="button"
+          class="choice"
+          id="paper"
+          value="paper"
+          style="display: none"
+        >
+          <img src="assets/images/paper.jpg" alt="paper" />
+        </button>
+
+        <button
+          type="button"
+          class="choice"
+          id="scissors"
+          value="scissors"
+          style="display: none"
+        >
+          <img src="assets/images/scissors.jpg" alt="scissors" />
         </button>
       </div>
-    </header>
-    <h2 class="choose"></h2>
-    <section class="flexbox">
-      <button
-        type="button"
-        class="choice"
-        id="rock"
-        value="rock"
-        style="display: none"
-      >
-        <img src="assets/images/rock.jpg" alt="rock" />
-      </button>
+    </div>
 
-      <button
-        type="button"
-        class="choice"
-        id="paper"
-        value="paper"
-        style="display: none"
-      >
-        <img src="assets/images/paper.jpg" alt="paper" />
-      </button>
+    <div class="card" id="comp-play">
+      <div class="row justify-content-center card-body">
+        <button
+          type="button"
+          class="comp-choice"
+          id="rock2"
+          value="rock"
+          style="display: none"
+        >
+          <img src="assets/images/rock.jpg" alt="rock" />
+        </button>
 
-      <button
-        type="button"
-        class="choice"
-        id="scissors"
-        value="scissors"
-        style="display: none"
-      >
-        <img src="assets/images/scissors.jpg" alt="scissors" />
-      </button>
-    </section>
-    <section class="flexbox" id="comp-sec">
-      <button
-        type="button"
-        class="comp-choice"
-        id="rock2"
-        value="rock"
-        style="display: none"
-      >
-        <img src="assets/images/rock.jpg" alt="rock" />
-      </button>
+        <button
+          type="button"
+          class="comp-choice"
+          id="paper2"
+          value="paper"
+          style="display: none"
+        >
+          <img src="assets/images/paper.jpg" alt="paper" />
+        </button>
 
-      <button
-        type="button"
-        class="comp-choice"
-        id="paper2"
-        value="paper"
-        style="display: none"
-      >
-        <img src="assets/images/paper.jpg" alt="paper" />
-      </button>
-
-      <button
-        type="button"
-        class="comp-choice"
-        id="scissors2"
-        value="scissors"
-        style="display: none"
-      >
-        <img src="assets/images/scissors.jpg" alt="scissors" />
-      </button>
-      <!-- Modal -->
+        <button
+          type="button"
+          class="comp-choice"
+          id="scissors2"
+          value="scissors"
+          style="display: none"
+        >
+          <img src="assets/images/scissors.jpg" alt="scissors" />
+        </button>
+      </div>
+      <!---------------- Modal --------------------->
       <div class="modal" id="my-modal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -132,7 +137,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
