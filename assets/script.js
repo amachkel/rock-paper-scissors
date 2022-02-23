@@ -20,7 +20,7 @@ function renderChoiceBtns() {
 }
 
 animateChooseEl = () => {
-  const chooseEl = $(".choose");
+  const chooseEl = $(".chooseText");
   chooseEl.addClass("animate__animated animate__zoomInDown animate__delay-1s");
   chooseEl.text("Choose Your Weapon");
 };
