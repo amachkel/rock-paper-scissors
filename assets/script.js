@@ -27,7 +27,7 @@ animateChooseEl = () => {
 
 function getUserChoice() {
   let userChoice = $(this).attr("value");
-  $(this).css("background", "blue");
+  $(this).css("background", "rgb(51, 88, 255)");
   $(".choice").attr("disabled", true);
   getCompChoice(userChoice);
 }
