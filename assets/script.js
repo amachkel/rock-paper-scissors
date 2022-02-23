@@ -38,8 +38,14 @@ getCompChoice = (userChoice) => {
 
   setTimeout(function () {
     $(".comp-choice").each(function () {
+      let compChooseEl = $(".compChooseText");
+      compChooseEl.addClass("animate__animated animate__zoomIn");
+      compChooseEl.text("The Enemy Chose...");
       let choiceVal = $(this).attr("value");
       if (compChoice === choiceVal) {
+        $(this).addClass(
+          "animate__animated animate__lightSpeedInLeft animate__delay-1s"
+        );
         $(this).css("display", "block");
       }
     });
@@ -75,7 +81,7 @@ getWinner = (userChoice, compChoice) => {
     $("#my-modal").modal("show");
     scoresEl.html("");
     scoresEl.html(`Wins: ${wins} <br> Losses: ${losses} <br> Ties: ${ties}`);
-  }, 1000);
+  }, 4000);
 };
 
 $("#clearBtn").click(function () {
@@ -86,6 +92,7 @@ $("#clearBtn").click(function () {
   $(".choice").css("display", "none");
   $(".comp-choice").css("display", "none");
   $(".choice").attr("disabled", false);
+  $(".compChooseText").text("");
 });
 
 $("#playAgain").click(function () {
@@ -93,4 +100,5 @@ $("#playAgain").click(function () {
   $("#my-modal").modal("hide");
   $(".choice").attr("disabled", false);
   $(".choice").css("background", "white");
+  $(".compChooseText").text("");
 });
